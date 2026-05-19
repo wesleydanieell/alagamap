@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alagamap - Previsão em Tempo Real</title>
+
+    <!-- Folha de Estilos Customizada -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS e JS do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Turf.js para processamento geográfico -->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+</head>
+<body>
+
+    <div class="glass-panel">
+        <div class="header">
+            <h1>Alagamap</h1>
+            
+            <div class="controls-group">
+                <!-- Seletor de Clima Real-time -->
+                <div class="forecast-container">
+                    <button id="btnRealtime" class="btn-forecast active">Hoje (Carregando...)</button>
+                    <select id="selectDias" class="select-forecast">
+                        <option value="" disabled selected>Próximos dias...</option>
+                    </select>
+                </div>
+
+                <!-- Painel de Simulação Manual -->
+                <div class="controls">
+                    <label for="chuvaInput">Simulação manual:</label>
+                    <input type="range" id="chuvaInput" min="0" max="150" value="20">
+                    <span><span id="chuvaValor">20</span> mm</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="mapa"></div>
+    </div>
+
+    <!-- Lógica de Negócio -->
+    <script src="script.js"></script>
+</body>
+</html>

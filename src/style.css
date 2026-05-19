@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 15% 50%, #1a1a24 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, #0d0d14 0%, transparent 50%),
+                #000000;
+    color: #f5f5f7;
+    overflow: hidden;
+}
+
+.glass-panel {
+    width: 95%;
+    max-width: 1200px;
+    background: rgba(30, 30, 35, 0.4);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 36px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    width: 100%;
+}
+
+.controls-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.forecast-container {
+    display: flex;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-forecast, .select-forecast {
+    background: transparent;
+    border: none;
+    color: #a1a1a6;
+    padding: 8px 16px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.select-forecast {
+    background-color: rgba(0, 0, 0, 0.2);
+    outline: none;
+    color: #fff;
+    padding-right: 24px;
+}
+
+.select-forecast option {
+    background: #1a1a24;
+    color: #fff;
+}
+
+.btn-forecast.active {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+}
+
+.btn-forecast:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.controls label {
+    font-weight: 500;
+    color: #a1a1a6;
+    font-size: 0.95rem;
+}
+
+.controls span {
+    color: #ffffff;
+    font-weight: 600;
+    min-width: 30px;
+    display: inline-block;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#mapa {
+    width: 100%;
+    height: 600px;
+    border-radius: 28px;
+    background: #f4f5f7; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Customização dos botões de Zoom (+ e -) */
+.leaflet-touch .leaflet-bar {
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.leaflet-touch .leaflet-bar a {
+    background: rgba(30, 30, 35, 0.7) !important;
+    backdrop-filter: blur(10px);
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    width: 34px !important;
+    height: 34px !important;
+    line-height: 34px !important;
+    transition: background 0.2s ease;
+}
+
+.leaflet-touch .leaflet-bar a:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Remove a borda dupla do último botão */
+.leaflet-touch .leaflet-bar a:last-child {
+    border-bottom: none !important;
+}
+
+.leaflet-tooltip {
+    background: rgba(20, 20, 20, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(10px);
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
