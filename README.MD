@@ -50,14 +50,20 @@ A única dependência necessária na sua máquina hospedeira é o interpretador 
 
 Execute os comandos abaixo no terminal para garantir que as ferramentas de controle de versão e o ambiente de runtime estejam configurados:
 
+**Ubuntu / Debian**
 ```bash
 # Atualizar repositórios do sistema
 sudo apt update
 
 # Instalar Git e Python 3
 sudo apt install git python3 python3-pip -y
-````
+```
 
+**Fedora**
+```bash
+# Instalar Git e Python 3
+sudo dnf install git python3 pip 
+```
 ### 🪟 Windows
 
 1. Baixe o instalador do executável estável do **Python 3.x** no site oficial [python.org](https://www.python.org/).
