@@ -9,6 +9,16 @@ O **alagamap** é uma aplicação geográfica web estruturada para a análise, m
 
 O resultado é a geração em tempo real de manchas térmicas e raios de impacto georreferenciados sobre um mapa interativo, permitindo simulações de cenários de chuva de forma manual ou automatizada.
 
+**Manual:**
+
+![Demonstraçãodo Projeto](/src/assets/example-image-1.png)
+
+**Automatizado:**
+
+![Demonstraçãodo Projeto](/src/assets/example-image-2.png)
+
+![Demonstraçãodo Projeto](/src/assets/example-image-3.png)
+
 ---
 
 ## Recursos Principais
